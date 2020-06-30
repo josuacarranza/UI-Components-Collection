@@ -19,7 +19,9 @@
     "url": "https://github.com/Josua96/UI-Components-Collection/issues"
   },
   "homepage": "https://github.com/Josua96/UI-Components-Collection#readme",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "peerDependencies": {
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
