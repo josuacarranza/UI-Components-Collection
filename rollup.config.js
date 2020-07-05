@@ -18,5 +18,5 @@ export default {
       sass({ insert: true }),
       typescript({ objectHashIgnoreUnknownHack: true })
     ],
-    external: ['react', 'react-dom']
+    external: ['react', 'react-dom', 'classnames']
   }

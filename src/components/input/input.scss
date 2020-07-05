@@ -1,6 +1,50 @@
+@import "../../utilities/colorsVariables.scss";
+@import "../../utilities/sizesVariables.scss";
 
-@import '../../utilities/colorsVariables.scss';
+.UI_collection_input {
+  height: 50px;
+  width: auto;
+  outline: none;
+  color: black;
 
-.input {
-    background-color: $success;
+  &:disabled {
+      border-color: $inp-disabled-borders;
+  }
+
+  &.inp__error {
+    border-color: $inp-error-borders !important;
+    color: $font-error;
+  }
+
+  &.inp__unbordered {
+      border: none;
+      border-bottom: 1.5px solid $inp-borders;
+      transition: border-bottom 0.1s;
+
+      &:focus {
+          border-bottom: 2px solid $inp-borders;
+      }
+  }
+
+  &.inp__bordered {
+
+    border: 1.5px solid $inp-borders;
+    transition: border 0.1s;
+
+    &:focus {
+        border: 2px solid $inp-borders;
+    }
+}
+
+  &.inp__sm {
+    width: $inp-sm;
+  }
+
+  &.inp__md {
+    width: $inp-md;
+  }
+
+  &.inp__lg {
+    width: $inp-lg;
+  }
 }

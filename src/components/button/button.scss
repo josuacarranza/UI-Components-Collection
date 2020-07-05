@@ -1,0 +1,71 @@
+@import "../../utilities/colorsVariables.scss";
+@import "../../utilities/sizesVariables.scss";
+
+.UI_collection_button {
+  color: white;
+  font-weight: 700;
+  width: auto;
+  height: 50px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  min-width: 44px;
+  transition: background-color 0.5;
+
+  &:disabled {
+    background-color: $btn-disabled;
+  }
+
+  &:active {
+    transform: perspective(100px) translateZ(-1px);
+  }
+
+  &.btn__primary {
+    background-color: $btn-primary;
+
+    &:hover {
+      background-color: $btn-primary-hover;
+    }
+  }
+  &.btn__success {
+    background-color: $btn-success;
+
+    &:hover {
+      background-color: $btn-success-hover;
+    }
+  }
+  &.btn__secondary {
+    background-color: $btn-secondary;
+
+    &:hover {
+      background-color: $btn-secondary-hover;
+    }
+  }
+  &.btn__danger {
+    background-color: $btn-danger;
+
+    &:hover {
+      background-color: $btn-danger-hover;
+    }
+  }
+  &.btn__warning {
+    background-color: $btn-warning;
+
+    &:hover {
+      background-color: $btn-warning-hover;
+    }
+  }
+
+  &.btn__sm {
+    width: $btn-sm;
+  }
+
+  &.btn__md {
+    width: $btn-md;
+  }
+
+  &.btn__lg {
+    width: $btn-lg;
+  }
+}
