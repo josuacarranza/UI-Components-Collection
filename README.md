@@ -20,4 +20,4 @@ You can now import the components as a normal package installed from npm like so
 
 
 ## Note:
-This is only a experimental package for learn the process of how to publish to npm
+This is only a experimental package. It's not ready for global use
