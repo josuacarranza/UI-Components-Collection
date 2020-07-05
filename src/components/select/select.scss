@@ -1,0 +1,38 @@
+@import "../../utilities/colorsVariables.scss";
+@import "../../utilities/sizesVariables.scss";
+
+.UI_collection_select {
+    height: 50px;
+    width: auto;
+    color: $black;
+    outline: none;
+    border: 1.5px solid $select-borders;
+    transition: border 0.1s;
+
+    &:focus {
+        border: 2px solid $select-borders;
+    }
+
+    &.select__sm {
+        width: $select-sm;
+    }
+
+    &.select__md {
+        width: $select-md;
+    }
+
+    &.select__lg {
+        width: $select-lg;
+    }
+}
+
+.UI_collection_select_option {
+    width: auto;
+    height: 40px;
+    outline: none;
+    background-color: $white;
+
+    &:hover {
+        background-color: $light-gray-1;
+    }
+}
