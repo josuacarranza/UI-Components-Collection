@@ -9,7 +9,7 @@ Clone this repository to your local computer, then run:
 - `npm install && npm run build`
 
 - To make this component available to other projects on your local computer, run `yarn link`.
-- Then go to the project where you want to use this package and run `yarn link "dummy-counter"`.
+- Then go to the project where you want to use this package and run `yarn link "UI-Components-Collection"`.
 
 Finally, to fix the multiple copies of React bug that shows up with linked React packages:
 
