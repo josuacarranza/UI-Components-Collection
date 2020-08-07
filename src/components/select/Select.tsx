@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import classNames from "classnames";
 import "./select.scss";
 
@@ -9,40 +9,66 @@ type OptionEntry = {
 interface SelectProps {
   className?: string;
   size?: "sm" | "md" | "lg";
-  value: any;
+  selectedValue: string | number;
   options: OptionEntry[];
   disabled: boolean;
-  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+  defaultText: string;
+  onChange: (option: OptionEntry) => void;
 }
 
 const baseClass = "UI_collection_select";
-const optionsBaseClass = "UI_collection_select_option";
+const optionsBaseClass = "select_options";
 
 const Select: React.FC<SelectProps> = ({
   className,
-  size,
-  value,
+  size="sm",
+  selectedValue,
+  defaultText = "Select an option",
   options,
-  onChange,
+  onChange= (option: OptionEntry) => console.log("selected option", option),
   disabled,
   ...otherProps
 }) => {
+  const [showOptions, setShowOptions] = useState(false);
+  const [selectionText, setSelectionText] = useState(defaultText);
+
+  const handleOptionsDisplay = () => {
+    setShowOptions(!showOptions);
+  };
+
+  const handleOptionClick = (option: OptionEntry) => {
+    setSelectionText(option.text);
+    setShowOptions(false);
+    onChange(option);
+  };
+
   const sizeClass = `select__${size}`;
   const classes = classNames(baseClass, className, sizeClass);
   return (
-    <select
-      className={classes}
-      value={value}
-      onChange={onChange}
-      disabled={disabled}
-      {...otherProps}
-    >
-      {options.map((option) => (
-        <option className={optionsBaseClass} value={option.value}>
-          {option.text}
-        </option>
-      ))}
-    </select>
+    <div className={classes} {...otherProps}>
+      <div
+        className={showOptions ? "selection_text active" : "selection_text"}
+        onClick={handleOptionsDisplay}
+      >
+        {selectionText}
+      </div>
+      {showOptions && (
+        <ul className={optionsBaseClass}>
+          {options.map((option, index) => {
+            return (
+              <li
+                className={""}
+                data-name={option.text}
+                key={index}
+                onClick={() => handleOptionClick(option)}
+              >
+                {option.text}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 };
 

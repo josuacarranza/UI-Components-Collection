@@ -7,27 +7,35 @@ interface ButtonProps {
   color?: "primary" | "success" | "secondary" | "danger" | "warning";
   size?: "sm" | "md" | "lg",
   value: string | number,
-  selected: boolean,
+  checked: boolean,
   disabled?: boolean;
+  label: string,
   onChange: (event:  React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const baseClass = "UI_collection_radio";
+const radioContainerClass = "UI_collection_radio_container";
 
 const Radio: React.FC<ButtonProps> = ({
   className = "",
   color = "primary",
   size = "",
   disabled = false,
+  checked = false,
   value,
+  label = "",
   onChange,
   ...otherProps
 }) => {
-  const colorClass = `btn__${color}`;
-  const sizeClass = `btn__${size}`;
+  const colorClass = `radio__${color}`;
+  const sizeClass = `radio__${size}`;
   const classes = classNames(baseClass, className,colorClass, sizeClass);
   return (
-    <input type="radio" className={classes} value={value} disabled={disabled} onChange={onChange} {...otherProps} />
+    <div className={radioContainerClass}>
+      <input type="radio" className={classes} value={value} checked={checked} disabled={disabled} onChange={onChange} {...otherProps} />
+      {label}
+    </div>
+    
   );
 };
 

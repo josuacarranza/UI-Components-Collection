@@ -1,0 +1,26 @@
+.UI_collection_radio_group {
+    display: flex;
+    width: auto;
+    height: 50px;
+    justify-content: flex-start;
+
+    .group__row {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .group__centered {
+        justify-content: center;
+    }
+
+    .group__column {
+        align-content: space-between;
+        flex-direction: column;
+    }
+
+    & input {
+        display: flex;
+        flex: 1;
+    }
+
+}

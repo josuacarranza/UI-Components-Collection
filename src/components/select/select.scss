@@ -2,37 +2,75 @@
 @import "../../utilities/sizesVariables.scss";
 
 .UI_collection_select {
-    height: 50px;
-    width: auto;
-    color: $black;
-    outline: none;
-    border: 1.5px solid $select-borders;
-    transition: border 0.1s;
+  display: inline-block;
+  min-width: 250px;
+  width: auto;
+  text-align: center;
+  position: relative;
+  height: 50px;
+  width: auto;
+  color: $black;
+  outline: none;
+  border: 1.5px solid $select-borders;
 
-    &:focus {
-        border: 2px solid $select-borders;
-    }
+  &:focus {
+    border: 2px solid $select-borders;
+  }
 
-    &.select__sm {
-        width: $select-sm;
-    }
+  &.select__sm {
+    width: $select-sm;
+  }
 
-    &.select__md {
-        width: $select-md;
-    }
+  &.select__md {
+    width: $select-md;
+  }
 
-    &.select__lg {
-        width: $select-lg;
-    }
-}
+  &.select__lg {
+    width: $select-lg;
+  }
 
-.UI_collection_select_option {
-    width: auto;
-    height: 40px;
-    outline: none;
+  .selection_text {
     background-color: $white;
+    padding: 6px 20px;
+    border-bottom: 1px solid $select-borders;
+    cursor: pointer;
+  }
 
-    &:hover {
-        background-color: $light-gray-1;
-    }
+  .selection_text::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 16px;
+    border: 7px solid transparent;
+    border-color: #000 transparent transparent transparent;
+  }
+
+  .selection_text.active::after {
+    top: 8px;
+    border-color: transparent transparent #000 transparent;
+  }
+
+  & > ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+
+  .select_options {
+    position: absolute;
+    width: 100%;
+    border: 0px 1px 1px 1px solid $select-borders;
+  }
+
+  & > ul li {
+    list-style-type: none;
+    padding: 6px 20px;
+    background: $white;
+    cursor: pointer;
+  }
+
+  & > ul li:hover {
+    background-color: #32a6a6;
+    color: #ffffff;
+  }
 }
