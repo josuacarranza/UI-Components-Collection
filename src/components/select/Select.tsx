@@ -52,7 +52,7 @@ const Select: React.FC<SelectProps> = ({
       >
         {selectionText}
       </div>
-      {showOptions && (
+      {showOptions && (<div>
         <ul className={optionsBaseClass}>
           {options.map((option, index) => {
             return (
@@ -67,7 +67,7 @@ const Select: React.FC<SelectProps> = ({
             );
           })}
         </ul>
-      )}
+      </div>)}
     </div>
   );
 };

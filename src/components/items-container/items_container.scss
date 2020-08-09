@@ -1,0 +1,19 @@
+
+.UI_collection_items_container {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    &.__row {
+        flex-direction: row;
+    }
+
+    &.__colum {
+        flex-direction: column;
+    }
+
+    &.divider {
+        flex-grow: 1;
+    }
+
+}

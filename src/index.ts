@@ -4,6 +4,9 @@ export { default as Select } from './components/select';
 export { default as Dropdown } from './components/dropdown';
 export { default as Checkbox } from './components/checkbox';
 export { default as Radio } from './components/radio';
-
-export default {
-}
+export { default as Text} from './components/text';
+export { default as Icon } from './components/icon';
+export { default as ItemsContainer} from './components/items-container';
+export { default as Battery } from './components/battery';
+export { default as Signal } from './components/signal';
+export { default as FormGroup } from './components/form-group';

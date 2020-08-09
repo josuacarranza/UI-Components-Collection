@@ -1,0 +1,54 @@
+@import "../../utilities/colorsVariables.scss";
+@import "../../utilities/sizesVariables.scss";
+
+.UI_collection_text {
+  color: $black;
+
+  &.font__bold {
+    font-weight: bold;
+  }
+
+  &.font__primary {
+    color: $font-primary;
+  }
+
+  &.font__success {
+    color: $font-success;
+  }
+
+  &.font__secondary {
+    color: $font-secondary;
+  }
+
+  &.font__danger {
+    color: $font-danger;
+  }
+
+  &.font__warning {
+    color: $btn-warning;
+  }
+
+  &.font__disabled {
+    color: $font-disabled;
+  }
+
+  &.title {
+    font-size: $title;
+  }
+
+  &.subtitle {
+    font-size: $subtitle;
+  }
+
+  &.normal {
+    font-size: $normal;
+  }
+
+  &.link__text {
+    text-decoration: none;
+  }
+
+  &.link__text:visited {
+    text-decoration: none;
+  }
+}

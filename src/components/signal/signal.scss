@@ -1,0 +1,61 @@
+.UI_collection_signal {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+
+  &.__signal_container {
+    width: 60px;
+    height: 30px;
+  }
+
+  &.__signal_bar {
+    width: 11px;
+    display: inline-block;
+    margin-right: 2px;
+  }
+
+  &.__very_weak {
+    height: 25%;
+    border: none;
+  }
+
+  &.__weak {
+    height: 50%;
+    border: none;
+  }
+
+  &.__strong {
+    height: 75%;
+    border: none;
+  }
+
+  &.__very_strong {
+    height: 100%;
+    border: none;
+  }
+
+  &.__transparent {
+    background-color: transparent;
+    padding-top: 0px;
+  }
+
+  &.__transparent.light {
+    border: 1px solid black;
+    background-color: transparent;
+  }
+
+  &.__transparent.dark {
+    border: 1px solid white;
+    background-color: transparent;
+  }
+
+  &.__low {
+    background-color: red;
+  }
+
+  &.__high {
+    background-color: green;
+  }
+}

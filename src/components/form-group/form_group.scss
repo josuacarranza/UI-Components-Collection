@@ -1,0 +1,16 @@
+.UI_collection_form_group {
+  display: grid;
+  margin-bottom: 10px;
+
+  &.__inline {
+    align-items: center;
+    column-gap: 10px;
+    grid-template-columns: 200px 1fr;
+    grid-template-rows: 50px;
+  }
+
+  &.__block {
+    row-gap: 10px;
+    grid-template-rows: 20px;
+  }
+}
