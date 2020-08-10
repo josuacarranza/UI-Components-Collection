@@ -3,6 +3,7 @@
 
     display: flex;
     flex-wrap: wrap;
+    padding: 5px;
 
     &.__row {
         flex-direction: row;
@@ -12,8 +13,13 @@
         flex-direction: column;
     }
 
-    &.divider {
-        flex-grow: 1;
+    & * {
+       margin: 5px; 
     }
 
+}
+
+.divider {
+    flex: 1;
+    margin: 0px;
 }
