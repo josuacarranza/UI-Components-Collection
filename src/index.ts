@@ -10,3 +10,4 @@ export { default as ItemsContainer} from './components/items-container';
 export { default as Battery } from './components/battery';
 export { default as Signal } from './components/signal';
 export { default as FormGroup } from './components/form-group';
+export { default as Modal } from './components/modal';

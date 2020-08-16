@@ -2,7 +2,8 @@
 @import "../../utilities/sizesVariables.scss";
 
 .UI_collection_text {
-  color: $black;
+  color: inherit;
+  cursor: inherit;
 
   &.font__bold {
     font-weight: bold;

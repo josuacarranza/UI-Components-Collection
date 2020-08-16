@@ -4,7 +4,7 @@ import "./button.scss";
 
 interface ButtonProps {
   className?: string;
-  color?: "primary" | "success" | "secondary" | "danger" | "warning";
+  color?: "primary" | "success" | "secondary" | "danger" | "warning" | "transparent";
   size?: "sm" | "md" | "lg", 
   disabled?: boolean;
   onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;

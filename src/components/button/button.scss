@@ -2,7 +2,6 @@
 @import "../../utilities/sizesVariables.scss";
 
 .UI_collection_button {
-  color: $white;
   font-weight: 700;
   width: auto;
   height: 50px;
@@ -19,6 +18,12 @@
 
   &:active {
     transform: perspective(100px) translateZ(-1px);
+  }
+
+  &.btn__transparent {
+    background-color: transparent;
+    border:0px;
+    border-color: transparent;
   }
 
   &.btn__primary {
