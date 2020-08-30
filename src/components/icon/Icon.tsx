@@ -3,10 +3,10 @@ import iconsMap from "../../icons/iconsMap";
 
 interface IconProps {
   name: string;
-  color: "white" | "black" | "blue" | string;
-  size: Number;
-  style: object;
-  className: string;
+  color?: "white" | "black" | "blue" | string;
+  size?: Number;
+  style?: object;
+  className?: string;
 }
 
 const ICON_COLORS = {
@@ -22,9 +22,9 @@ const Icon: React.FC<IconProps> = ({
   size = 16,
   color = "white",
 }) => {
-  const iconColor = ICON_COLORS[color];
+  const iconColor = ICON_COLORS[color] ? ICON_COLORS[color] : color;
   const icon = iconsMap[name];
-  delete icon["parh"];
+ // delete icon["path"];
   return (
     <svg
       className={className}

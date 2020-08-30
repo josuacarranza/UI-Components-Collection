@@ -4,7 +4,7 @@ import "./text.scss";
 
 interface TextProps {
   className?: string,
-  type?: "title" | "subtitle" | "normal",
+  size?: "sm" | "sm2" | "sm3" | "md" | "md2" | "md3" | "md4" | "lg" | "lg2",
   color?: "primary" | "success" | "secondary" | "danger" | "warning",
   bold?: boolean,
   link?: boolean,
@@ -16,7 +16,7 @@ const linkBaseClass = "link__text";
 
 const Text: React.FC<TextProps> = ({
   className,
-  type = "normal",
+  size = "sm3",
   color = "",
   bold = false,
   value = "",
@@ -24,7 +24,7 @@ const Text: React.FC<TextProps> = ({
   ...otherProps
 }) => {
   const colorClass = `font__${color}`;
-  const classes = classNames(baseClass, className, colorClass, type, {
+  const classes = classNames(baseClass, className, colorClass, size, {
       ['font__bold'] : bold,
       [linkBaseClass]: link,
   });

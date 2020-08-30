@@ -33,16 +33,39 @@
     color: $font-disabled;
   }
 
-  &.title {
-    font-size: $title;
+  &.sm {
+    font-size: $sm-text;
   }
 
-  &.subtitle {
-    font-size: $subtitle;
+  &.sm2 {
+    font-size: $sm2-text;
   }
 
-  &.normal {
-    font-size: $normal;
+  &.sm3 {
+    font-size: $sm3-text;
+  }
+
+  &.md1 {
+    font-size: $md-text;
+  }
+
+  &.md2 {
+    font-size: $md2-text;
+  }
+  &.md3 {
+    font-size: $md3-text;
+
+  }
+  &.md4 {
+    font-size: $md4-text;
+  }
+
+  &.lg {
+    font-size: $lg-text;
+  }
+
+  &.lg2 {
+    font-size: $lg2-text;
   }
 
   &.link__text {

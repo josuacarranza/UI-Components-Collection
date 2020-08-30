@@ -11,6 +11,7 @@
   cursor: pointer;
   min-width: 44px;
   transition: background-color 0.5;
+  color: white;
 
   &:disabled {
     background-color: $btn-disabled;

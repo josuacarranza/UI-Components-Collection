@@ -12,7 +12,7 @@ interface ModalProps {
   size?: "small" | "medium" | "large",
   type?: "centered" | "top",
   open: boolean;
-  onClose: () => void;
+  onClose: Function;
 }
 
 const baseClass = "UI_collection_modal";

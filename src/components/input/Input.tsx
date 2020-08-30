@@ -4,10 +4,10 @@ import "./input.scss";
 
 interface InputProps {
   className?: string;
-  type: string;
+  type?: string;
   errorState?: boolean;
   size?: "sm" | "md" | "lg";
-  value: any;
+  value?: any;
   placeHolder?: string;
   defaultValue?: string;
   disabled?: boolean;
