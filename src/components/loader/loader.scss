@@ -1,0 +1,65 @@
+@import "../../utilities/colorsVariables.scss";
+@import "../../utilities/sizesVariables.scss";
+
+.UI_collection_loader {
+  &__circle {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid #3498db;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: circle-loader 2s linear infinite;
+    animation: circle-loader 2s linear infinite;
+  }
+}
+
+.__loader_linear_container {
+    overflow: hidden;
+    height: 4px;
+    background-color: #B3E5FC;
+
+  }
+
+.__loader_linear_bar {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.__loader_linear_bar:after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  background-color: #4fc3f7;
+  animation: linear-loader 1.5s infinite ease-in;
+}
+
+/* Safari */
+@-webkit-keyframes circle-loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes circle-loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes linear-loader {
+  0% {
+    left: -150%;
+    width: 100%;
+  }
+  100% {
+    left: 100%;
+    width: 10%;
+  }
+}

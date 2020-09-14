@@ -5,6 +5,8 @@ interface IconProps {
   name: string;
   color?: "white" | "black" | "blue" | string;
   size?: Number;
+  width?: Number;
+  height?: Number;
   style?: object;
   className?: string;
 }
@@ -19,18 +21,23 @@ const Icon: React.FC<IconProps> = ({
   className,
   name,
   style,
-  size = 16,
+  size,
+  width,
+  height,
   color = "white",
 }) => {
   const iconColor = ICON_COLORS[color] ? ICON_COLORS[color] : color;
   const icon = iconsMap[name];
- // delete icon["path"];
+  // delete icon["path"];
+  const { width: iconWidth, height: iconHeight } = size
+    ? { width: `${size}px`, height: `${size}px` }
+    : { width: `${width}px`, height: `${height}px` };
   return (
     <svg
       className={className}
       style={style}
-      width={`${size}px`}
-      height={`${size}px`}
+      width={iconWidth}
+      height={iconHeight}
       {...icon}
     >
       <path fill={iconColor} d={icon.path} />
