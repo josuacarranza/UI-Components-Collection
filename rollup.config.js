@@ -1,5 +1,6 @@
-import sass from 'rollup-plugin-sass'
-import typescript from 'rollup-plugin-typescript2'
+import sass from 'rollup-plugin-sass';
+import typescript from 'rollup-plugin-typescript2';
+import { getBabelOutputPlugin } from '@rollup/plugin-babel';
 
 import pkg from './package.json'
 
@@ -16,7 +17,10 @@ export default {
     ],
     plugins: [
       sass({ insert: true }),
-      typescript({ objectHashIgnoreUnknownHack: true })
+      typescript({ objectHashIgnoreUnknownHack: true }),
+        getBabelOutputPlugin({
+          presets: ['@babel/preset-env']
+        })
     ],
     external: ['react', 'react-dom', 'classnames']
   }

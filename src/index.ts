@@ -12,3 +12,4 @@ export { default as Signal } from './components/signal';
 export { default as FormGroup } from './components/form-group';
 export { default as Modal } from './components/modal';
 export { default as Loader} from './components/loader';
+export { default as Table} from './components/table';

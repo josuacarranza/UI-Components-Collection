@@ -1,0 +1,12 @@
+.UI_collection_table_column {
+    display: grid;
+    grid-row: 1;
+    align-items: center;
+
+    &.__centered {
+        justify-content: center;
+    }
+    &.__start {
+        justify-content: start;
+    }
+}

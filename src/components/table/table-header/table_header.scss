@@ -1,0 +1,23 @@
+.UI_collection_table_header {
+    border-radius: 2px;
+    &.__sticky {
+        position: sticky;
+    }
+    &.__primary {
+        background-color: #0333a0;
+        color: white;
+    }
+    &.__dark {
+        background-color: #000000;
+        color: white;
+    }
+    &.__success {
+        background-color: #1b9239;
+        color: white;
+    }
+    &.__transparent {
+        background-color: transparent;
+        color: #000000;
+    }
+
+}

@@ -1,0 +1,20 @@
+.UI_collection_table_row {
+    display: grid;
+    grid-auto-columns: minmax(100px, 1fr);
+
+    &.__hoverable:hover {
+        background-color: #C7CEC8;
+    }
+
+    &.__bordered {
+        border-bottom: 1px solid #ccc5c5;
+    }
+
+    &.__header {
+        height: 60px;
+    }
+
+    &.__row {
+        height: 80px;
+    }
+}
