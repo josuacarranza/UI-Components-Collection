@@ -65,7 +65,7 @@ const Dropdown: IDropdown = ({
   const classes = classNames(baseClass, className);
 
   const onDocumentClick = (event: any) => {
-    if (event.target === dropdownRef?.current) {
+    if (open &&  event.target !== dropdownRef?.current) {
       onClickOutside();
     }
   };
@@ -78,7 +78,7 @@ const Dropdown: IDropdown = ({
   }, []);
 
   return (
-    <div className={classes}>
+    <div className={classes} ref={dropdownRef}>
       <DropdownContext.Provider value={{ open }}>
         {React.Children.map(children, (child) => {
           return React.isValidElement(child) ? React.cloneElement(child) : null;

@@ -12,6 +12,7 @@
   min-width: 44px;
   transition: background-color 0.5;
   color: white;
+  margin: 0px;
 
   &:disabled {
     background-color: $btn-disabled;
