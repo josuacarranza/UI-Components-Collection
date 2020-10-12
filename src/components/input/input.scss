@@ -6,6 +6,7 @@
   width: auto;
   outline: none;
   color: black;
+  font-size: inherit;
 
   &:disabled {
       border-color: $inp-disabled-borders;

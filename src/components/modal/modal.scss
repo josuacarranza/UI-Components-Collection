@@ -29,6 +29,7 @@
   border-radius: 4px;
   position: absolute;
   left: 50%;
+  padding: 15px;
 
   &.__small {
     width: 400px;
@@ -128,4 +129,8 @@
     flex-direction: column;
   }
 
+}
+
+.UI_collection_modal_footer * {
+  margin-left: 5px;
 }

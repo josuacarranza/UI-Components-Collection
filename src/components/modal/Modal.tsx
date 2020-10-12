@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames";
+import ReactDOM from 'react-dom';
 
 import ModalHeader from "./header";
 import ModalBody from "./body";
@@ -65,7 +66,7 @@ class Modal extends Component<ModalProps> {
       ["__open"]: open,
       ["__closed"]: !open,
     });
-    return (
+    return ReactDOM.createPortal(
       <div className={classes} ref={this.modalBackdropRef}>
         <span
           className={closeIconBaseClass}
@@ -83,7 +84,8 @@ class Modal extends Component<ModalProps> {
               : null;
           })}
         </div>
-      </div>
+      </div>,
+      document.body
     );
   }
 }
