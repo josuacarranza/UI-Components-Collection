@@ -2,6 +2,9 @@
 @import "../../utilities/sizesVariables.scss";
 
 .UI_collection_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
   width: auto;
   height: 50px;
@@ -15,7 +18,7 @@
   margin: 0px;
 
   &:disabled {
-    background-color: $btn-disabled;
+    background-color: $btn-disabled !important;
   }
 
   &:active {
