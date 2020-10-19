@@ -3,15 +3,16 @@
 
 .UI_collection_select {
   display: inline-block;
-  min-width: 250px;
   width: auto;
   text-align: center;
   position: relative;
   width: auto;
   color: $black;
   outline: none;
-  border: 1.5px solid $select-borders;
-  box-sizing: border-box;
+  border-color: $select-borders;
+  border-width: 1.5px 1.5px 1.5px 1.5px;
+  border-style: solid;
+  border-radius: 4px;
 
   &:focus {
     border: 2px solid $select-borders;
@@ -32,36 +33,21 @@
   .selection_text {
     background-color: $white;
     min-height: 30px;
-    padding: 9px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 1fr 30px;
+    column-gap: 3px;
     box-sizing: border-box;
     cursor: pointer;
   }
 
-  .selection_text::after {
-    content: "";
-    position: absolute;
-    right: 10px;
-    top: 16px;
-    border: 7px solid transparent;
-    border-color: #000 transparent transparent transparent;
-    box-sizing: border-box;
-  }
-
-  .selection_text.active::after {
-    top: 8px;
-    border-color: transparent transparent #000 transparent;
-  }
-
   .select_options {
-    position: absolute;
     width: 100%;
     margin: 0;
     padding: 0;
     padding-top: 1px;
     text-align: center;
-    border-color: $select-borders;
-    border-width: 0px 1px 1px 1px;
-    border-style: solid;
     box-sizing: border-box;
   }
 

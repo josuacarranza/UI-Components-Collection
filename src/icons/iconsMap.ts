@@ -15,6 +15,8 @@ import redo from "./redo";
 import questionCircle from "./questionCircle";
 import copy from "./copy";
 import plus from "./plus";
+import caretDown from './caretDown';
+import caretUp from './caretUp';
 
 export default {
   arrowLeft: arrowLeftIcon,
@@ -34,4 +36,6 @@ export default {
   questionCircle: questionCircle,
   copy: copy,
   plus: plus,
+  caretDown: caretDown,
+  caretUp: caretUp,
 };

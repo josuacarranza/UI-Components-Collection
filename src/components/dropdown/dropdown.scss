@@ -5,45 +5,53 @@
   padding: 0;
   margin: 0;
   position: relative;
-  display: inline-block;
+
+  &.__inherit {
+    width: inherit;
+  }
 }
 
 .UI_collection_dropdown_content {
-    position: absolute;
-    margin-top: 2.5px;
-    background-color: $white;
-    padding: 15px;
-    min-height: 100px;
-    overflow: auto;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1000;
+  position: absolute;
+  margin-top: 2.5px;
+  background-color: $white;
+  padding: 15px;
+  min-height: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 
-    &.__open {
-        display: block;
-      }
-    
-      &.__close {
-        display: none;
-      }
-    
-      &.__sm {
-        min-width: $dropdown-sm;
-      }
-    
-      &.__md {
-        min-width: $dropdown-md;
-      }
-    
-      &.__lg {
-        min-width: $dropdown-lg;
-      }
-    
-      &.__toLeft {
-          right: 0;
-      }
-    
-      &.__toRight {
-          left: 0;
-      }
-      
+  &.__open {
+    display: block;
   }
+
+  &.__close {
+    display: none;
+  }
+
+  &.__sm {
+    min-width: $dropdown-sm;
+  }
+
+  &.__md {
+    min-width: $dropdown-md;
+  }
+
+  &.__lg {
+    min-width: $dropdown-lg;
+  }
+
+  &.__toLeft {
+    right: 0;
+  }
+
+  &.__toRight {
+    left: 0;
+  }
+
+  &.__centered {
+    width: inherit !important;
+    margin-top: 3px;
+    padding: 2px;
+    min-width: 0px;
+  }
+}

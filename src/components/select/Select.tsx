@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import classNames from "classnames";
+import Dropdown from "../dropdown";
+import Text from '../text';
+import Icon from "../icon";
+import classNames from 'classnames';
 import "./select.scss";
 
 type OptionEntry = {
@@ -21,11 +24,11 @@ const optionsBaseClass = "select_options";
 
 const Select: React.FC<SelectProps> = ({
   className,
-  size="sm",
+  size = "sm",
   selectedValue,
   defaultText = "Select an option",
   options,
-  onChange= (option: OptionEntry) => console.log("selected option", option),
+  onChange = (option: OptionEntry) => console.log("selected option", option),
   disabled,
   ...otherProps
 }) => {
@@ -46,28 +49,35 @@ const Select: React.FC<SelectProps> = ({
   const classes = classNames(baseClass, className, sizeClass);
   return (
     <div className={classes} {...otherProps}>
-      <div
-        className={showOptions ? "selection_text active" : "selection_text"}
-        onClick={handleOptionsDisplay}
-      >
-        {selectionText}
-      </div>
-      {showOptions && (<div>
-        <ul className={optionsBaseClass}>
-          {options.map((option, index) => {
-            return (
-              <li
-                className={""}
-                data-name={option.text}
-                key={index}
-                onClick={() => handleOptionClick(option)}
-              >
-                {option.text}
-              </li>
-            );
-          })}
-        </ul>
-      </div>)}
+      <Dropdown open={showOptions} width="inherit">
+        <Dropdown.Header>
+          <div
+            className={showOptions ? "selection_text active" : "selection_text"}
+            onClick={handleOptionsDisplay}
+          >
+            <Text value={selectionText} />
+            <Icon name={showOptions ? "caretUp" : "caretDown"} color="black" size={20} />
+          </div>
+        </Dropdown.Header>
+        <Dropdown.Content orientation="centered">
+          {showOptions && (
+            <ul className={optionsBaseClass}>
+              {options.map((option, index) => {
+                return (
+                  <li
+                    className={""}
+                    data-name={option.text}
+                    key={index}
+                    onClick={() => handleOptionClick(option)}
+                  >
+                    {option.text}
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </Dropdown.Content>
+      </Dropdown>
     </div>
   );
 };

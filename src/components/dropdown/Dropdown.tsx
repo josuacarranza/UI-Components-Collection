@@ -21,7 +21,7 @@ const DropdownHeader: React.FC<DropdownHeaderProps> = ({ children }) => {
 
 interface DropdownContentProps {
   size?: "sm" | "md" | "lg";
-  orientation: "toLeft" | "toRight";
+  orientation: "toLeft" | "toRight" | "centered";
 }
 
 const DropdownContent: React.FC<DropdownContentProps> = ({
@@ -48,6 +48,7 @@ interface DropdownProps {
   className?: string;
   open: boolean;
   onClickOutside?: Function;
+  width?: "inherit" | "";
 }
 
 type IDropdown = React.FunctionComponent<DropdownProps> & {
@@ -58,14 +59,16 @@ type IDropdown = React.FunctionComponent<DropdownProps> & {
 const Dropdown: IDropdown = ({
   className = "",
   open,
+  width = "",
   onClickOutside = () => null,
   children,
 }) => {
   const dropdownRef = useRef(null);
-  const classes = classNames(baseClass, className);
+  const widthClass = `__${width}`;
+  const classes = classNames(baseClass, className, widthClass);
 
   const onDocumentClick = (event: any) => {
-    if (open &&  event.target !== dropdownRef?.current) {
+    if (open && event.target !== dropdownRef?.current) {
       onClickOutside();
     }
   };

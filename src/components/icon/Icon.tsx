@@ -28,7 +28,7 @@ const Icon: React.FC<IconProps> = ({
 }) => {
   const iconColor = ICON_COLORS[color] ? ICON_COLORS[color] : color;
   const icon = iconsMap[name];
-  // delete icon["path"];
+  
   const { width: iconWidth, height: iconHeight } = size
     ? { width: `${size}px`, height: `${size}px` }
     : { width: `${width}px`, height: `${height}px` };
