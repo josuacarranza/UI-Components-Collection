@@ -15,8 +15,12 @@ import redo from "./redo";
 import questionCircle from "./questionCircle";
 import copy from "./copy";
 import plus from "./plus";
-import caretDown from './caretDown';
-import caretUp from './caretUp';
+import caretDown from "./caretDown";
+import caretUp from "./caretUp";
+import edit from "./edit";
+import lightBulb from "./lightBulb";
+import globe from "./globe";
+import stickyNote from "./stickyNote";
 
 export default {
   arrowLeft: arrowLeftIcon,
@@ -38,4 +42,8 @@ export default {
   plus: plus,
   caretDown: caretDown,
   caretUp: caretUp,
+  edit,
+  lightBulb,
+  globe,
+  stickyNote,
 };
