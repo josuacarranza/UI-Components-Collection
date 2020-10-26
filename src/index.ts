@@ -16,3 +16,4 @@ export { default as Table } from "./components/table";
 export { default as TextArea } from "./components/text-area";
 export { default as RadioGroup } from "./components/radio-group";
 export { default as CheckboxGroup } from "./components/checkbox-group";
+export { default as List } from './components/list';

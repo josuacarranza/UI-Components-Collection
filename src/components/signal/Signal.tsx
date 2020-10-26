@@ -25,7 +25,7 @@ const Signal: React.FC <SignalProps> = ({
   if(strength !== 'noSignal'){
     signalStrengthHighTransparentOrLowClass = ['strong', 'veryStrong'].includes(strength) ? "__high" : "__low";
   } 
-  const signalBarsClasses = classNames("__dark", signalStrengthHighTransparentOrLowClass, "__signal_bar");
+  const signalBarsClasses = classNames("__dark", signalStrengthHighTransparentOrLowClass, "UI_collection__signal_bar");
 
   const isNoSignalStrength = strength === 'noSignal';
   const isVeryWeakStrength = strength === 'veryWeak';
