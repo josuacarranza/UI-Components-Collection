@@ -21,6 +21,8 @@ import edit from "./edit";
 import lightBulb from "./lightBulb";
 import globe from "./globe";
 import stickyNote from "./stickyNote";
+import angleDown from "./angleDown";
+import angleUp from "./angleUp";
 
 export default {
   arrowLeft: arrowLeftIcon,
@@ -46,4 +48,6 @@ export default {
   lightBulb,
   globe,
   stickyNote,
+  angleDown,
+  angleUp,
 };

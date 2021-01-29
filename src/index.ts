@@ -17,3 +17,4 @@ export { default as TextArea } from "./components/text-area";
 export { default as RadioGroup } from "./components/radio-group";
 export { default as CheckboxGroup } from "./components/checkbox-group";
 export { default as List } from './components/list';
+export { default as ExpansionPanel } from "./components/expansion-panel";
