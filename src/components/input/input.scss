@@ -8,6 +8,7 @@
   color: black;
   font-size: inherit;
   background-color: #fff;
+  border-radius: 6px;
 
   &:disabled {
       border-color: $inp-disabled-borders;
@@ -20,21 +21,21 @@
 
   &.inp__unbordered {
       border: none;
-      border-bottom: 1px solid $inp-borders;
+      border-bottom: 1.5px solid $inp-borders;
       transition: border-bottom 0.1s;
 
       &:focus {
-          border-bottom: 1.5px solid $inp-borders-active;
+          border-bottom: 2px solid $inp-borders-active;
       }
   }
 
   &.inp__bordered {
 
-    border: 1px solid $inp-borders;
+    border: 1.5px solid $inp-borders;
     transition: border 0.1s;
 
     &:focus {
-        border: 1.5px solid $inp-borders-active;
+        border: 2px solid $inp-borders-active;
     }
 }
 
