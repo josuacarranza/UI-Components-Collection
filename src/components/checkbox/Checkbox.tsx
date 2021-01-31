@@ -25,6 +25,7 @@ const Checkbox: React.FC<ButtonProps> = ({
   value,
   checked,
   onChange,
+  children,
   ...otherProps
 }) => {
   const colorClass = `chk__${color}`;
@@ -33,7 +34,7 @@ const Checkbox: React.FC<ButtonProps> = ({
   return (
     <div className={checkboxContainerClass}>
       <input type="checkbox" className={classes} value={value} disabled={disabled} checked={checked} onChange={onChange} {...otherProps} />
-      {label}
+      {children}
     </div>
   );
 };
