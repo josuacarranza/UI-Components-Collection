@@ -6,7 +6,7 @@ interface ButtonProps {
   className?: string;
   color?: "primary" | "success" | "secondary" | "danger" | "warning",
   size?: "sm" | "md" | "lg",
-  label: string,
+  label?: string,
   value: string | number,
   checked: boolean,
   disabled?: boolean;
@@ -34,7 +34,7 @@ const Checkbox: React.FC<ButtonProps> = ({
   return (
     <div className={checkboxContainerClass}>
       <input type="checkbox" className={classes} value={value} disabled={disabled} checked={checked} onChange={onChange} {...otherProps} />
-      {children}
+      {label || children}
     </div>
   );
 };
