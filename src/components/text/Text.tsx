@@ -8,7 +8,7 @@ interface TextProps {
   color?: "primary" | "success" | "secondary" | "danger" | "warning";
   bold?: boolean;
   link?: boolean;
-  value: Number | String;
+  value?: Number | String;
 }
 
 const baseClass = "UI_collection_text";
