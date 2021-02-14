@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import classNames from "classnames";
 import Icon from "../../icon";
 
-import { ExpansionPanelContext } from "../ExpansionPanel";
+import { ExpansionPanelContext } from '../context';
 
 import "../expansion-panel.scss";
 

@@ -2,18 +2,9 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import Header from "./header";
 import Content from "./content";
+import { ExpansionPanelContext } from './context';
 
 import "./expansion-panel.scss";
-
-type ExpansionPanelContext = {
-  expanded: boolean;
-  setExpanded: (expanded: boolean) => void;
-}
-
-export const ExpansionPanelContext = React.createContext<ExpansionPanelContext>({
-  expanded: false,
-  setExpanded: () => null
-});
 
 interface ExpansionPanelProps {
   className?: string;

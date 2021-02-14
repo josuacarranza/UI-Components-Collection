@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import classNames from "classnames";
 
-import { ExpansionPanelContext } from "../ExpansionPanel";
+import { ExpansionPanelContext } from '../context';
 
 import "../expansion-panel.scss";
 
