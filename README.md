@@ -4,20 +4,7 @@ Basically it's needed because it could avoid to share UI components between Reac
 
 ## How to use
 
-Clone this repository to your local computer, then run:
-
-- `npm install && npm run build`
-
-- To make this component available to other projects on your local computer, run `yarn link`.
-- Then go to the project where you want to use this package and run `yarn link "UI-Components-Collection"`.
-
-Finally, to fix the multiple copies of React bug that shows up with linked React packages:
-
-- navigate to the root of the `UI-Components-Collection` package
-- run `npm link "../path/to/your/project"`
-
-You can now import the components as a normal package installed from npm like so:
-
+Comming soon for more accurate descriptions on how to run it locally or how to use it in a project.
 
 ## Note:
-This is only a experimental package. It's not ready for global use
+This is an experimental package. It's not inteded for global use yet.
