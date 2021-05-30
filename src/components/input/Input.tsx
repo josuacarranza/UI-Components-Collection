@@ -25,7 +25,7 @@ const Input: React.FC<InputProps> = ({
   size,
   placeHolder,
   value,
-  defaultValue,
+  defaultValue = "",
   onChange,
   disabled,
   ...otherProps

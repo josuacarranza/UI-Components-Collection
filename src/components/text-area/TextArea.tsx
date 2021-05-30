@@ -23,7 +23,7 @@ const TextArea: React.FC<TextProps> = ({
   size,
   placeHolder,
   value,
-  defaultValue,
+  defaultValue = "",
   onChange,
   disabled,
   ...otherProps
