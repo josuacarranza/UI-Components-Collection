@@ -35,10 +35,12 @@ const TextArea: React.FC<TextProps> = ({
     ["inp__error"]: errorState,
   });
 
+  const valueToUse = value ? value : defaultValue;
+
   return (
     <textarea
       className={classes}
-      value={value || defaultValue}
+      value={valueToUse}
       placeholder={placeHolder}
       onChange={onChange}
       disabled={disabled}

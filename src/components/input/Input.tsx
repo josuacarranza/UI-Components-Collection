@@ -36,11 +36,12 @@ const Input: React.FC<InputProps> = ({
     ["inp__unbordered"]: !bordered,
     ["inp__error"]: errorState,
   });
+  const valueToUse = value ? value: defaultValue;
   return (
     <input
       className={classes}
       type={type}
-      value={value || defaultValue}
+      value={valueToUse}
       placeholder={placeHolder}
       onChange={onChange}
       disabled={disabled}
